@@ -56,9 +56,11 @@ def findM2(F, pts1, pts2, intrinsics, filename="q3_3.npz"):
 
     ***
     Hints:
-    (1) Loop through the 'M2s' and use triangulate to calculate the 3D points and projection error. Keep track
-        of the projection error through best_error and retain the best one.
-    (2) Remember to take a look at camera2 to see how to correctly reterive the M2 matrix from 'M2s'.
+    (1) Loop through the 'M2s' and use triangulate to calculate the 3D points and projection error. Check that the 3D points lie in front of both cameras to select the right configuration.
+        
+    (2) Remember to take a look at camera2 to see how to correctly retrieve the M2 matrix from 'M2s'.
+
+    For more details, refer to Section 11.3.1, Page 708 of Computer Vision: Algorithms and Applications Richard Szeliski (2nd edition).
 
     """
     # ----- TODO -----
